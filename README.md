@@ -50,3 +50,6 @@ C:\xampp\htdocs\proyectodisweb
 
 6.RUTA WEB DE LOGIN DEL PROYECTO:
 http://localhost/proyectodisweb/login.php
+
+7. ENLACE DE VIDEO DE YOUTUBE:
+https://www.youtube.com/watch?v=JzbpnJq_fBc
