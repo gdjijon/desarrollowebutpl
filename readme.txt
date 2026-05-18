@@ -1,9 +1,30 @@
 INSTRUCTIVO PARA VISUALIZACION DE PROYECTO
 
-1.INSTALAR XAMPP Y EJECUTAR SERVICIOS MYSQL Y APACHE
+El proyecto consiste en un pequeño sistema web mediante login de PHP y MySQL
+Con acceso a una zona privada, visible solo a los usuarios autenticados.
+Opciones de actualización de datos básicos de perfil ( nombre y correo electrónico)
+Cmabio de contraseña segura verificando la contraseña actual y almacenando la nueva con hash.
+Cierre de sesión para finalizar la autenticación
+
+Validaciones incluidas
+Correo repetido y sintaxis
+Validación de cedula
+Validación de contraseña con requerimientos de complejidad
+Contraseña guardada con hash
+opciones de zona privada
+opciones de cambio de contraseña, peticion de contraseña antiguam 
+uso de password_verify
+Uso de password_hash
+mostrar mensajes de exito y error 
+
+PASOS PARA INSTALACIÓN
+
+1. DESCARGAR WEB DESDE LA WEB:  https://www.apachefriends.org/es/download.html
+
+2.INSTALAR XAMPP EN EL EQUIPO Y EJECUTAR SERVICIOS MYSQL Y APACHE
 
 
-2.PARA LA CREACIÓN DE LA BASE DE DATOS:
+3.PARA LA CREACIÓN DE LA BASE DE DATOS:
 Ingresar a http://localhost/phpmyadmin   opción SQL ejecutar:
 
 CREATE TABLE usuarios (
@@ -18,11 +39,11 @@ CREATE TABLE usuarios (
 );
 
 
-3. DESCARGA DE ARCHIVOS DE PAGINA WEB DESDE GITHUB:
+4. DESCARGA DE ARCHIVOS DE PAGINA WEB DESDE GITHUB:
 En https://github.com/gdjijon/desarrollowebutpl
 
-3. COLOCAR LOS ARCHIVOS EN LA RUTA LOCAL (CREAR LA CARPETA proyectodisweb) en HTDOCS
+5. COLOCAR LOS ARCHIVOS EN LA RUTA LOCAL (CREAR LA CARPETA proyectodisweb) en HTDOCS
 C:\xampp\htdocs\proyectodisweb
 
-3.RUTA DE LOGIN DEL PROYECTO:
+6.RUTA WEB DE LOGIN DEL PROYECTO:
 http://localhost/proyectodisweb/login.php
