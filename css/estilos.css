@@ -1,0 +1,251 @@
+/* Reset básico de elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centrado base de la interfaz y tipografía */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ----------------- PÁGINAS PÚBLICAS (Login / Registro / Logout / Confirmación) ----------------- */
+body.bg-login {
+    background-image: url('../images/login.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.85); /* Fondo con 85% de opacidad */
+    padding: 30px 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    backdrop-filter: blur(4px);
+}
+
+.form-container h2 {
+    font-size: 24px;
+    color: #0b3d91; /* Azul corporativo unificado */
+    margin-bottom: 25px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"] {
+    width: 100%;
+    padding: 12px 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Botón de formularios públicos con efectos y sombra */
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0b3d91;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 12px rgba(11, 61, 145, 0.2);
+}
+
+.form-container button:hover {
+    background-color: #082d6b;
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 0 6px 15px rgba(11, 61, 145, 0.4);
+}
+
+.form-container button:active {
+    transform: scale(0.98); /* Efecto clic de hundimiento */
+}
+
+.captcha {
+    font-weight: bold;
+    background: #eee;
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    user-select: none;
+}
+
+.error {
+    color: #d93025;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.exito {
+    color: #2e7d32;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-container p {
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.form-container a {
+    color: #0b3d91;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+/* ----------------- PÁGINA PRIVADA (Portal del Usuario) ----------------- */
+body.bg-portal {
+    background-image: url('../images/imagepanel.jpg'); /* Enlace de fondo corregido */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.portal-container {
+    display: flex;
+    flex-direction: column; /* Cambiado a flujo vertical para colocar el menú arriba */
+    background: rgba(255, 255, 255, 0.90); /* Contenedor con opacidad del 90% */
+    width: 900px;
+    max-width: 95%;
+    min-height: 550px;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    margin: 40px auto; 
+}
+
+/* Menú superior horizontal (Azul Corporativo) */
+.portal-menu {
+    background-color: #0b3d91;
+    color: #fff;
+    width: 100%;
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: row; /* Botones distribuidos horizontalmente */
+    gap: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+.portal-menu button {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid transparent;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold; /* Negrita en los botones del menú */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+}
+
+.portal-menu button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px); /* Efecto elevación en barra horizontal */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.portal-menu button:active {
+    transform: scale(0.98);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Área interna de información */
+.portal-content {
+    flex: 1;
+    padding: 50px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.portal-content h2 {
+    color: #0b3d91;
+    margin-bottom: 30px;
+    font-size: 28px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 12px;
+}
+
+.portal-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.portal-content p strong {
+    color: #222;
+    display: inline-block;
+    width: 160px;
+}
+
+/* Botones y formularios dentro de la sección privada */
+.portal-content button[type="submit"] {
+    background-color: #0b3d91;
+    color: #fff;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(11, 61, 145, 0.3);
+    width: 100%;
+    margin-top: 10px;
+}
+
+.portal-content button[type="submit"]:hover {
+    background-color: #082d6b;
+    box-shadow: 0 6px 15px rgba(11, 61, 145, 0.5);
+}
+
+.portal-content input[type="text"],
+.portal-content input[type="email"],
+.portal-content input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccd1d9;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    transition: border-color 0.3s, background 0.3s;
+}
+
+.portal-content input:focus {
+    border-color: #0b3d91;
+    outline: none;
+    background: #fff;
+}
